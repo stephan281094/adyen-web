@@ -2,6 +2,7 @@ import { FunctionComponent } from 'preact';
 import { GiftcardFieldsProps } from './components/types';
 import { UIElementProps } from '../internal/UIElement/types';
 import { Order, PaymentAmount, PaymentData } from '../../types/global-types';
+import { StylesObject } from '../internal/SecuredFields/lib/types';
 
 export interface GiftCardElementData {
     paymentMethod: {
@@ -36,6 +37,7 @@ export interface GiftCardConfiguration extends UIElementProps {
     expiryDateRequired?: boolean;
     brandsConfiguration?: any;
     brand?: string;
+    styles?: StylesObject;
     onOrderUpdated?: (data) => void;
     onBalanceCheck?: onBalanceCheckCallbackType;
     onOrderRequest?: onOrderRequestCallbackType;
